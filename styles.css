@@ -1,0 +1,220 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+   
+}
+
+html {
+  font-size: 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+}
+
+
+.navBar {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+.navBar__logo {
+  text-decoration: none;
+  margin: 0.5rem;
+}
+.navBar__brand {
+  color: #de9e43;
+  font-size: 3rem;
+}
+.navBar__link {
+  color: #de9e43;
+  font-size: 2.4rem;
+  margin: 0rem 2rem;
+}
+.navBar__link:hover {
+  color: #de9e43;
+}
+.navBar__button {
+  text-decoration: none;
+  margin: 0.5rem;
+  color: #de9e43;
+  font-size: 2rem;
+  border: 0.2rem solid #E7E6E1;
+  border-radius: 0.3rem;
+}
+.navBar__button:hover {
+  color: #e9bf83;
+  background-color: #E7E6E1;
+  border: 0.2rem solid #E7E6E1;
+  border-radius: 0.3rem;
+  font-size: 2rem;
+}
+
+
+.bloque1 {
+  width: 80%;
+  border: 0.2rem solid #C4C4C0;
+  border-radius: 1.1rem;
+  margin: 10rem 0rem 2rem 12rem;
+  padding: 1rem;
+  
+}
+.bloque1__fecha {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.bloque1__fechaLeft {
+  font-size: 2rem;
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+}
+.bloque1__fechaCenter {
+  font-size: 5rem;
+  color: #de9e43;
+  letter-spacing: 0.5rem;
+}
+.bloque1__clima {
+  align-self: right;
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+.fecha__numero {
+  font-size: 6rem;
+  margin-left: 4rem;
+}
+.fecha__mes {
+  font-size: 2rem;
+  margin-left: 1rem;
+  letter-spacing: 0.5rem;
+}
+.fecha__año {
+  font-size: 3rem;
+  margin-left: 3.2rem;
+  letter-spacing: 0.7rem;
+}
+
+.nuevaTarea {
+  display: flex;
+  justify-content: center;
+}
+.nuevaTarea__control {
+  margin: 2rem 1rem;
+  font-size: 1.7rem;
+  color: #de9e43;
+  padding: 2rem;
+}
+.nuevaTarea__agregar {
+  font-style: bold;
+  background-color: #de9e43;
+  color: #E7E6E1;
+  width: 3rem;
+  border: none;
+  border-radius: 0.3rem;
+}
+.nuevaTarea__ordenar {
+  padding: 0rem 1rem;
+  border: none;
+  border-radius: 0.3rem;
+}
+
+.listadoTareas {
+  margin-left: 14rem;
+}
+.listadoTareas__tareaRealizar {
+  width: 80%;
+  border-bottom: 0.2rem dotted #C4C4C0;
+  margin: 2rem;
+  cursor: pointer;
+}
+
+.tareaGenerada {
+  width: 80%;
+  border-bottom: 0.2rem dotted #C4C4C0;
+  margin: 2rem;
+  cursor: pointer;
+}
+
+.bloque2 {
+  width: 75%;
+  margin-left: 15rem;
+  background-color: #C4C4C0;
+  padding: 2rem;
+  border-radius: 0.2rem;
+}
+.bloque2__tituloNotas {
+  font-size: 2.5rem;
+  margin: 2rem;
+}
+
+textarea {
+  width: 95%;
+  background-color: #C4C4C0;
+  font-size: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+.bloqueTres {
+  width: 75%;
+  height: 30vh;
+  margin: 2rem 0rem 2rem 15rem;
+  background-color: #e9bf83;
+  padding: 2rem;
+  border-radius: 0.2rem;
+}
+
+
+
+.footer {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin-top: 4rem;
+  background-color: #de9e43;
+}
+.footer__bloque {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.footer__brand {
+  font-size: 2rem;
+  letter-spacing: 0.3rem;
+  text-decoration: none;
+  margin: 1rem 0rem;
+  color: #E7E6E1;
+}
+.footer__acceso {
+  font-size: 1.5rem;
+  text-decoration: none;
+  margin: 1rem 0rem;
+  color: #E7E6E1;
+}
+.footer__social {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.footer__redes {
+  color: #E7E6E1;
+  font-size: 2.5rem;
+  margin: 0rem 1rem;
+}
+
+.footer__redes:hover{
+  color:gray;
+}
+
+.done {
+  background-color: var(--diabled);
+  text-decoration: line-through;
+  color: var(--dark);
+}
