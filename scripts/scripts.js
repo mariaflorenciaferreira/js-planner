@@ -33,13 +33,7 @@ const addNewTask = event => {
   event.target.reset();
 };
 
-$('#taskButton').on('click',()=>{
 
-   $('.task').slideDown("fast");
-
-
-
-});
 
 
   
@@ -63,10 +57,17 @@ const addNewBirthday = event => {
   if(!value) return;
   const cumple = document.createElement('div');
   cumple.classList.add('cumpleaños');
+  cumple.addEventListener('click', changeBirthday)
   cumple.textContent = value;
   contenedorCumpleaños.append(cumple);
  
   event.target.reset();
+};
+
+const changeBirthday = event => {
+
+  $('.cumpleaños').fadeOut(250);
+  
 };
 
 
