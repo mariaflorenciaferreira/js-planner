@@ -16,7 +16,10 @@ document.querySelector("#diaSemana").innerHTML= `${diaSemana}`;
 
 // ingreso nuevas tareas
 
-const contenedorDeTareas =$('.contenedorTareas');
+
+
+
+const contenedorTareas =$('#contenedorTareas');
 
 const addNewTask = event => {
   event.preventDefault();
@@ -26,16 +29,28 @@ const addNewTask = event => {
   task.classList.add('task');
   task.addEventListener('click', changeTaskState)
   task.textContent = value;
-  contenedorDeTareas.prepend(task);
+  contenedorTareas.append(task);
   event.target.reset();
 };
+
+$('#taskButton').on('click',()=>{
+
+   $('.task').slideDown("fast");
+
+
+
+});
+
+
   
 
 const changeTaskState = event => {
 
-  // event.target.$('.task').toggleClass("cross") ;
+  
   event.target.classList.toggle('done');
 };
+
+
 
 
 // ingreso cumpleaños
@@ -50,6 +65,7 @@ const addNewBirthday = event => {
   cumple.classList.add('cumpleaños');
   cumple.textContent = value;
   contenedorCumpleaños.append(cumple);
+ 
   event.target.reset();
 };
 

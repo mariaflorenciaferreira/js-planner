@@ -6,6 +6,8 @@
    
 }
 
+
+
 html {
   font-size: 10px;
   font-family: "Poppins", sans-serif;
@@ -105,25 +107,36 @@ body {
 .nuevaTarea {
   display: flex;
   justify-content: center;
+  width: 100%;
+  
 }
+
 .nuevaTarea__control {
+  
   margin: 2rem 1rem;
-  font-size: 1.7rem;
+  font-size: 2rem;
   color: #de9e43;
-  padding: 2rem;
+  height: 4rem;
+  
 }
-.nuevaTarea__agregar {
+
+.addButton {
   font-style: bold;
   background-color: #de9e43;
   color: #E7E6E1;
-  width: 3rem;
+  width: 5rem;
+  height: 4rem;
+  
   border: none;
   border-radius: 0.3rem;
 }
+
 .nuevaTarea__ordenar {
-  padding: 0rem 1rem;
+  height: 4rem;
   border: none;
   border-radius: 0.3rem;
+  width: 25rem;
+  color: #de9e43;
 }
 
 .listadoTareas {
@@ -136,9 +149,23 @@ body {
   cursor: pointer;
 }
 
-.tareaGenerada {
+.task{
+  font-size: 2.5rem;
   width: 80%;
   border-bottom: 0.2rem dotted #C4C4C0;
+  margin: 2rem;
+  cursor: pointer;
+}
+
+#ingresoCumpleaños{
+  width: 50rem;
+  padding: 0.8em;
+}
+
+
+.cumpleaños{
+  font-size: 2.5rem;
+  width: 80%;
   margin: 2rem;
   cursor: pointer;
 }
