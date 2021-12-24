@@ -7,7 +7,6 @@
 }
 
 
-
 html {
   font-size: 10px;
   font-family: "Poppins", sans-serif;
@@ -17,32 +16,31 @@ body {
   height: 100vh;
 }
 
+/* barra de navegación  */
+
 
 .navBar {
   display: flex;
   flex-direction: row;
   width: 100%;
   justify-content: space-between;
-  align-items: center;
-  align-content: center;
+  
 }
-.navBar__logo {
+.navLogo {
   text-decoration: none;
   margin: 0.5rem;
 }
-.navBar__brand {
+.navBrand {
   color: #de9e43;
   font-size: 3rem;
 }
-.navBar__link {
+.navLink {
   color: #de9e43;
   font-size: 2.4rem;
   margin: 0rem 2rem;
 }
-.navBar__link:hover {
-  color: #de9e43;
-}
-.navBar__button {
+
+.navButton {
   text-decoration: none;
   margin: 0.5rem;
   color: #de9e43;
@@ -50,7 +48,8 @@ body {
   border: 0.2rem solid #E7E6E1;
   border-radius: 0.3rem;
 }
-.navBar__button:hover {
+
+.navButton:hover {
   color: #e9bf83;
   background-color: #E7E6E1;
   border: 0.2rem solid #E7E6E1;
@@ -58,8 +57,13 @@ body {
   font-size: 2rem;
 }
 
+input[type="text"]{
+  font-size: 2.5rem;
+  color: black;
+}
 
-.bloque1 {
+
+.bloqueUno {
   width: 80%;
   border: 0.2rem solid #C4C4C0;
   border-radius: 1.1rem;
@@ -67,38 +71,36 @@ body {
   padding: 1rem;
   
 }
-.bloque1__fecha {
+.bloqueFecha {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.bloque1__fechaLeft {
+.fechaLeft {
   font-size: 2rem;
   display: flex;
   align-items: left;
   flex-direction: column;
 }
-.bloque1__fechaCenter {
+.fechaCenter {
   font-size: 5rem;
   color: #de9e43;
   letter-spacing: 0.5rem;
 }
-.bloque1__clima {
-  align-self: right;
-  font-size: 2rem;
-  margin-right: 1rem;
-}
 
-.fecha__numero {
+
+.fechaNumero {
   font-size: 6rem;
   margin-left: 4rem;
 }
-.fecha__mes {
+
+.fechaMes {
   font-size: 2rem;
   margin-left: 1rem;
   letter-spacing: 0.5rem;
 }
-.fecha__año {
+
+.fechaAño {
   font-size: 3rem;
   margin-left: 3.2rem;
   letter-spacing: 0.7rem;
@@ -111,7 +113,7 @@ body {
   
 }
 
-.nuevaTarea__control {
+.tareaControl {
   
   margin: 2rem 1rem;
   font-size: 2rem;
@@ -126,12 +128,11 @@ body {
   color: #E7E6E1;
   width: 5rem;
   height: 4rem;
-  
   border: none;
   border-radius: 0.3rem;
 }
 
-.nuevaTarea__ordenar {
+.tareaOrdenar {
   height: 4rem;
   border: none;
   border-radius: 0.3rem;
@@ -142,12 +143,8 @@ body {
 .listadoTareas {
   margin-left: 14rem;
 }
-.listadoTareas__tareaRealizar {
-  width: 80%;
-  border-bottom: 0.2rem dotted #C4C4C0;
-  margin: 2rem;
-  cursor: pointer;
-}
+
+
 
 .task{
   font-size: 2.5rem;
@@ -170,26 +167,8 @@ body {
   cursor: pointer;
 }
 
-.bloque2 {
-  width: 75%;
-  margin-left: 15rem;
-  background-color: #C4C4C0;
-  padding: 2rem;
-  border-radius: 0.2rem;
-}
-.bloque2__tituloNotas {
-  font-size: 2.5rem;
-  margin: 2rem;
-}
 
-textarea {
-  width: 95%;
-  background-color: #C4C4C0;
-  font-size: 1.5rem;
-  margin-left: 1.5rem;
-}
-
-.bloqueTres {
+.bloqueDos {
   width: 75%;
   height: 30vh;
   margin: 2rem 0rem 2rem 15rem;
@@ -207,41 +186,122 @@ textarea {
   margin-top: 4rem;
   background-color: #de9e43;
 }
-.footer__bloque {
+
+.footerBloque {
   display: flex;
   flex-direction: column;
   text-align: center;
 }
-.footer__brand {
+
+.footerBrand {
   font-size: 2rem;
   letter-spacing: 0.3rem;
   text-decoration: none;
   margin: 1rem 0rem;
   color: #E7E6E1;
 }
-.footer__acceso {
+
+
+.footerAcceso {
   font-size: 1.5rem;
   text-decoration: none;
   margin: 1rem 0rem;
   color: #E7E6E1;
 }
-.footer__social {
+
+
+.footerSocial {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  
 }
-.footer__redes {
+
+
+.footerRedes {
   color: #E7E6E1;
   font-size: 2.5rem;
   margin: 0rem 1rem;
 }
 
-.footer__redes:hover{
-  color:gray;
+.footerRedes:hover{
+  color: #C4C4C0;
 }
 
 .done {
   background-color: var(--diabled);
   text-decoration: line-through;
   color: var(--dark);
+}
+
+
+
+/* bloque clima */
+
+.search-form {
+  margin: 20px 20px;
+}
+
+.searchbox {
+  padding: 10px 20px;
+  
+  max-width: 480px;
+  margin: 0px auto;
+  border-radius: 3px;
+}
+
+.search {
+  width: 100%;
+  
+  border: none;
+  font-size: 1rem;
+}
+
+.search:focus {
+  outline: none;
+}
+
+.weather-card {
+  margin: 20px 20px;
+  
+  padding: 20px;
+  text-align: center;
+  border-radius: 3px;
+  /* display: none; */
+}
+
+.city {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  color: #de9e43;
+}
+
+.date {
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+  color: #de9e43;
+}
+
+
+.temperature {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  color: black;
+}
+
+.temp-img {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.temp {
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+.weather {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
 }

@@ -5,8 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- css bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <!-- iconos fontawesome -->
     <script
@@ -21,9 +19,13 @@
     <!-- css styles -->
     <link rel="stylesheet" href="./styles.css">
 
-    <!-- jquery -->
+    <!-- jquery AJAX -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- bootstrap -->
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
 
 
@@ -41,14 +43,14 @@
     <nav class="navbar navbar-expand-lg    navbar-light  bg-light fixed-top  navBar">
 
      <div class="container-fluid">
-       <a class="navbar-brand" href="./index.html">
+       <a class="navBrand" href="./index.html">
          <img
            src="#"
-           class="navBar__logo"
+           class="navLogo"
            alt="logo"
        /></a>
        <a class="navbar-brand" href="./index.html">
-         <h2 class="navBar__brand">Daily Planner</h2></a
+         <h2 class="navBrand">Daily Planner</h2></a
        >
 
        <button
@@ -70,16 +72,16 @@
          <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-end">
            <li class="nav-item ">
              <a
-               class="nav-link navBar__link"
+               class="nav-link navLink"
                aria-current="page"
                href="./index.html"
                >INICIO</a
              >
            </li>
 
-           <li class="nav-item" class="navBar__link">
+           <li class="nav-item" class="navLink">
              <a
-               class="nav-link navBar__link" 
+               class="nav-link navLink" 
                aria-current="page"
                href="#"
                >DIA</a
@@ -87,21 +89,21 @@
            </li>
 
            <li class="nav-item">
-             <a class="nav-link navBar__link" href="#"
+             <a class="nav-link navLink" href="#"
                >SEMANA</a
              >
            </li>
 
-           <li class="nav-item">
-             <a class="nav-link navBar__link" href="#">MES</a>
+           <li class="nav-item navLink">
+             <a class="nav-link navLink" href="#">MES</a>
            </li>
         
           </ul>
 
          <form class="d-flex">
-            <input type="button" id="botonenviar" value="Ingresar" class="navBar__button" id="botonIngresar">
+            <input type="button" id="botonenviar" value="Ingresar" class="navButton" id="botonIngresar">
 
-            <input type="button" id="botonenviar" value="Registrarse" class="navBar__button" id="botonRegistro">
+            <input type="button" id="botonenviar" value="Registrarse" class="navButton" id="botonRegistro">
 
           
           </form>
@@ -113,6 +115,8 @@
 
 
   </header>
+
+  <!-- formulario de registro de usuarios -->
 
   <div id="formularioRegistro" style="display:none">
     <form method="post" id="formdata">
@@ -141,42 +145,67 @@
 
     
 
-    <div class="bloque1">
-        <div class=bloque1__fecha>
+    <div class="bloqueUno">
+        <div class=bloqueFecha>
 
           <!-- fecha del día -->
 
-          <div class="bloque1__fechaLeft" > 
+          <div class="fechaLeft" > 
 
             
-          <div class="fecha__numero" id="numero"> </div>
-          <div class="fecha__mes" id="mes"> </div>
-          <div class="fecha__año" id="año"></div></div>
-          <div class="bloque1__fechaCenter" id="diaSemana"> </div>
-          <div class="bloque1__clima">  API CLIMA</div>
+          <div class="fechaNumero" id="numero"> </div>
+          <div class="fechaMes" id="mes"> </div>
+          <div class="fechaAño" id="año"></div></div>
+          <div class="fechaCenter" id="diaSemana"> </div>
+
+
+
+          <!-- buscador del clima  -->
+
+          <div class="bloqueClima">  
+
+            <div class="search-form">
+              <form id="search-form">
+                <div class="searchbox">
+                  <input type="text" autocomplete="off" placeholder="Buscar tu ciudad" class="search" id="searchbox" />
+                </div>
+              </form>
+            </div>
+            <div class="weather-card" id="card">
+              <div class="city" id="city"></div>
+              <div class="date" id="date"></div>
+              <div class="temperature">
+                <img src="./img/thermometer.png" class="temp-img" id="temp-img" />
+                <div class="temp" id="temp"></div>
+              </div>
+              <div class="weather" id="weather"></div>
+              <div class="range" id="range"></div>
+            </div>
+          </div>
+            
+
 
         </div>
 
-        <div class="nuevaTarea">
+        <!-- formulario ingreso tareas -->
 
-          <!-- formulario ingreso tareas -->
+        <div class="nuevaTarea">
+          
           <form id="formTareas" class="nuevaTarea" method="post" onsubmit="addNewTask(event)">
 
-            <div class="nuevaTarea__control" > 
+            <div class="tareaControl" > 
               <input type="text"  placeholder="Ingresar nueva tarea" autocomplete="off" name="ingresoNuevaTarea" id="ingresoTarea"/>
 
               <button type="submit" class="addTaskButton addButton" id="taskButton " >+</button>
 
            
-
-
             </div>
 
 
 
-            <div class="nuevaTarea__control">
+            <div class="tareaControl">
     
-             <button class="nuevaTarea__ordenar" type="button"> ordenar tareas</button> 
+             <button class="tareaOrdenar" type="button"> ordenar tareas</button> 
             </div>
             
 
@@ -186,99 +215,81 @@
          
         </div>
 
-        <div class="listadoTareas" id="contenedorTareas">
-          
-          <!-- listado tareas ingresadas -->
-        
-          
 
-        </div>
+      <!-- listado tareas ingresadas -->
+
+      <div class="listadoTareas" id="contenedorTareas"> </div>
        
 
 
     </div>
 
-    <div class="bloque2">
+    <!-- formulario ingreso cumpleaños -->
 
-      <!-- formulario ingreso cumpleaños -->
+    <div class="bloqueDos">
+
       <form id="formCumpleaños" class="cumpleaños" method="post" onsubmit="addNewBirthday(event)">
 
-        <div class="nuevaTarea__control" > 
+        <div > 
           <input type="text"  placeholder="Ingresar nombre de quien cumple años" autocomplete="off" name="ingresoCumpleaños" id="ingresoCumpleaños"/>
 
           <button type="submit" class="addBirthdayButton addButton" >+</button>
 
-       
-
         </div>
 
-        <div class="listadoCumpleaños" id="contenedorCumpleaños">
-          
-          <!-- listado cumpleaños -->
-        
-          
+      <!-- listado cumpleaños -->
 
-        </div>
+      <div class="listadoCumpleaños" id="contenedorCumpleaños">
 
-
-      
-
+      </div>
         
     </div>
-
-    
-
-    
-
-   
 
 
    </main>
 
 
    <footer class="footer">
-    <div class="footer__bloque">
+    <div class="footerBloque">
 
       <a class="logoPlanner" href="#">LOGO</a>
-      <a class="navbar-brand footer__brand" href="#">Daily Planner</a>
+      <a class="navbar-brand footerBrand" href="#">Daily Planner</a>
 
     </div>
 
-    <div class="footer__bloque">
+    <div class="footerBloque">
 
-      <a href="" class="footer__acceso">MES</a>
-      <a href="" class="footer__acceso">SEMANA</a>
-      <a href="" class="footer__acceso">DATOS CONTACTO</a>
+      <a href="" class="footerAcceso">MES</a>
+      <a href="" class="footerAcceso">SEMANA</a>
+      <a href="" class="footerAcceso">DATOS CONTACTO</a>
     </div>
 
-    <div class="footer__social">
+    <div class="footerSocial">
 
-      <a class="nav-link active footer__redes" aria-current="page" href="#">
-        <i class="fab fa-facebook"></i>
+      <a class="nav-link active " aria-current="page" href="#">
+        <i class="fab fa-facebook  footerRedes"></i>
     </a>
 
-    <a class="nav-link footer__redes" href="#">
-        <i class="fab fa-instagram"></i>
+    <a class="nav-link " href="#">
+        <i class="fab fa-instagram footerRedes"></i>
     </a>
 
-    <a class="nav-link footer__redes" href="#">
-        <i class="fab fa-pinterest"></i>
+    <a class="nav-link " href="#">
+        <i class="fab fa-pinterest footerRedes"></i>
     </a>
 
     </div>
-</footer>
+  </footer>
 
  
  
-    <!-- jQuery -->
-   
+  <!-- jQuery links -->
     <script src="./scripts/class.js"></script>
     <script src="./scripts/functions.js"></script>
     <script src="./scripts/usuario.js"></script>
     <script src="./scripts/scripts.js"></script>
-    <script src="./scripts/weather.js"></script>
-
-
+    
+    <script src="./scripts/clima.js"></script>
 
     
 </body>
