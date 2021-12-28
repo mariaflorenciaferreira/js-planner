@@ -6,20 +6,14 @@ const api = {
 const card = document.getElementById('card')
 
 const city = document.getElementById('city');
-// city.addEventListener('keypress', function (e) {
-//   if (e.key === 'Enter')},removeCiudad);
+
 const tempImg = document.getElementById('temp-img');
 const temp = document.getElementById('temp');
 const weather = document.getElementById('weather');
 const range = document.getElementById('range');
 
 
-// const removeCiudad = event => {
 
-//   $('.search').fadeOut(250);
-  
-// };
-  
 function updateImages(data) {
     const temp = toCelsius(data.main.temp);
     let src = './img/weather,png';
@@ -42,6 +36,7 @@ async function search(query) {
       weather.innerHTML = data.weather[0].description;
       range.innerHTML = `${toCelsius(data.main.temp_min)}c / ${toCelsius(data.main.temp_max)}c`;
       updateImages(data);
+
     } catch (err) {
       console.log(err);
       alert('No ingresaste una ciudad existente');
@@ -60,3 +55,4 @@ function onSubmit(event) {
 const searchform = document.getElementById('search-form');
 const searchbox = document.getElementById('searchbox');
 searchform.addEventListener('submit', onSubmit, true);
+
