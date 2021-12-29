@@ -55,7 +55,7 @@ $(document).ready(function (){
     
     getCoordinates();
 
-
+    // obtener datos del clima
 
     const api = {
         key: '1ef7a138b9dfb79bae57a1c3925879e3',
@@ -83,9 +83,11 @@ $(document).ready(function (){
     }
 
 
-    async function search(nombreCiudad) {
-    
-        const response = await fetch(`${api.url}?q=${nombreCiudad}&appid=${api.key}&lang=es`);
+    async function search(lat,lng) {
+        
+        try{
+        
+        const response = await fetch(`${api.url}?lat=${lat}&lon=${lng}&appid=${api.key}`);
         const data = await response.json();
         card.style.display = 'block';
         city.innerHTML = `${data.name}, ${data.sys.country}`;
@@ -93,13 +95,19 @@ $(document).ready(function (){
         weather.innerHTML = data.weather[0].description;
         range.innerHTML = `${toCelsius(data.main.temp_min)}c / ${toCelsius(data.main.temp_max)}c`;
         updateImages(data);
+         }catch (err) {
+        console.log(err);
+        alert('No tenemos acceso a tu ubicación');
     
     
         
+        }
     }
 
     function toCelsius(kelvin) {
         return Math.round(kelvin - 273.15);
     }
-})
 
+    search();
+
+})
