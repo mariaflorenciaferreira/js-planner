@@ -95,7 +95,8 @@ $(document).ready(function (){
         weather.innerHTML = data.weather[0].description;
         range.innerHTML = `${toCelsius(data.main.temp_min)}c / ${toCelsius(data.main.temp_max)}c`;
         updateImages(data);
-         }catch (err) {
+
+        }catch (err) {
         console.log(err);
         alert('No tenemos acceso a tu ubicación');
     

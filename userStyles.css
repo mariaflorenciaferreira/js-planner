@@ -1,0 +1,172 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+   
+}
+
+
+html {
+  font-size: 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-image: url(./img/userBck.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+
+main{
+    width: 100%;
+    padding:2rem;
+    margin: auto;
+    margin-top: 10rem;
+
+}
+
+.contenendorUsuario{
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+   
+}
+
+.cajaUsuario{
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    background-color:#de9e43;
+    margin: auto;
+    border-radius: 0.5rem;
+    
+}
+
+.cajaUsuario div{
+    margin: 10rem 4rem;
+    color: white;
+    transition: all 500ms;
+    
+   
+
+}
+
+
+
+.cajaUsuario div p,
+ .cajaUsuario div button{
+    margin-top: 3rem;
+    font-size: 1.5rem;
+}
+
+.cajaUsuario div h3{
+    font-weight: 400;
+    font-size: 2.6rem;
+}
+
+
+.cajaUsuario div p{
+    font-weight: 300;
+    font-size: 1.6rem;
+}
+
+
+.cajaUsuario button{
+    padding: 1rem 4rem;
+    border: 0.2rem solid white;
+    border-radius: 0.5rem;
+    background: transparent;
+    font-size: 1.4rem;
+    font-weight: 60rem;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    transition: all 300ms;
+}
+
+.cajaUsuario button:hover{
+    background-color:#e9bf83;
+    color: grey;
+}
+
+/* estilo formularios */
+
+.contenedorLogin-register{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 380px;
+    position: relative;
+    top: -195px;
+    left: 210px;
+    
+    transition: left 500ms cubic-bezier(0.175,0.885,0.320,1.275);
+
+
+    
+}
+
+.contenedorLogin-register form{
+    width: 100%;
+    padding: 8rem 2rem;
+    background-color:#C4C4C0 ;
+    position: absolute;
+    border-radius: 2rem;
+    
+    
+
+}
+
+
+.contenedorLogin-register form h2{
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #de9e43;
+    letter-spacing: 0.3rem;
+    
+}
+
+.contenedorLogin-register form input{
+    width: 100%;
+    margin-top: 2rem;
+    padding: 1rem;
+    border: none;
+    background: #f2f2f2;
+    font-size: 1.6rem;
+    outline: none;
+}
+
+
+.contenedorLogin-register form button{
+    padding: 1rem 4rem;
+    margin-top: 4rem;
+    border: none;
+    font-size: 1.4rem;
+    font-weight: 600;
+    background-color:#de9e43 ;
+    cursor: pointer;
+    outline: none;
+    
+}
+
+.formLogin{
+    opacity: 1;
+    display: block;
+}
+
+.formRegister{
+    display: none;
+}
+
+
+
+
+

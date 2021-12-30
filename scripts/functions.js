@@ -1,4 +1,6 @@
+// funciones fecha planner
 
+// funcion nombre del mes
 function mesFecha(){
 
     let numeroMes= date.getMonth();
@@ -48,7 +50,8 @@ function mesFecha(){
  
 }
  
- 
+ // funcion nombre día de la semana
+
 function diaFecha(){
 
     let nombreDia= date.getDay();
@@ -83,4 +86,6 @@ function diaFecha(){
     
  
 }
+
+
 
