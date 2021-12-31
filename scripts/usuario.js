@@ -1,13 +1,12 @@
 
 document.getElementById("botonRegistrarse").addEventListener("click",register);
 
-
-document.getElementById("botonInicioSesion").addEventListener("click",iniciarSesion);
-
+document.querySelector('#botonInicioSesion').addEventListener("click",iniciarSesion);
 
 
 
-// funciones formulario de registro
+
+// funciones formulario de registro/inicio de sesiòn
 
 
 
@@ -40,3 +39,24 @@ function register(){
 
 
 
+// localStorage datos del usuario
+
+function handleForm(e){
+    e.target.name==='nombre' && e.target.value.toUpperCase()
+
+
+}
+
+
+function submit(e){
+    e.preventDefault()
+    const arr=[]
+
+    for (const element of e.target){
+        console.log(element)
+        element.value && arr.push({name: element.name, value: element.value })
+    }
+    console.log(arr)
+    const user = new Usuario(arr[0].value, arr[1].value, arr[2].value,arr[3].value)
+  user.save()
+}

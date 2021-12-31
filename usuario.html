@@ -17,6 +17,7 @@
 
     <!-- css styles -->
     <link rel="stylesheet" href="./userStyles.css">
+    <link rel="stylesheet" href="styles.css">
 
     <!-- jquery AJAX -->
 
@@ -28,7 +29,84 @@
 
     <title>Ingreso y registro de usuarios</title>
 </head>
-<body>
+<body >
+
+    <header>
+
+        
+        <!-- nav bar -->
+    <nav class="navbar navbar-expand-lg    navbar-light  bg-light fixed-top  navBar">
+
+     <div class="container-fluid">
+       <a class="navBrand" href="./index.html">
+         <img
+           src="#"
+           class="navLogo"
+           alt="logo"
+       /></a>
+       <a class="navbar-brand" href="./index.html">
+         <h2 class="navBrand">Daily Planner</h2></a
+       >
+
+       <button
+         class="navbar-toggler"
+         type="button"
+         data-bs-toggle="collapse"
+         data-bs-target="#navbarSupportedContent"
+         aria-controls="navbarSupportedContent"
+         aria-expanded="false"
+         aria-label="Toggle navigation">
+         
+         <span class="navbar-toggler-icon"></span>
+       </button>
+       
+       <div
+         class="collapse navbar-collapse justify-content-around"
+         id="navbarSupportedContent" >
+         
+         <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-end">
+           <li class="nav-item ">
+             <a
+               class="nav-link navLink"
+               aria-current="page"
+               href="./index.html"
+               >INICIO</a
+             >
+           </li>
+
+           <li class="nav-item" class="navLink">
+             <a
+               class="nav-link navLink" 
+               aria-current="page"
+               href="#"
+               >DIA</a
+             >
+           </li>
+
+           <li class="nav-item">
+             <a class="nav-link navLink" href="#"
+               >SEMANA</a
+             >
+           </li>
+
+           <li class="nav-item navLink">
+             <a class="nav-link navLink" href="#">MES</a>
+           </li>
+        
+          </ul>
+
+          <button class="navButton" id="botonIngresar"> <a href="./usuario.html">Ingresar</a></button>
+          <button class="navButton" id="botonRegistro"> <a href="./usuario.html">Registrarse</a></button>
+
+         
+        
+        </div>
+      </div>
+    </nav>
+
+
+
+  </header>
 
     <main>
         <div class="contenedorUsuario">
@@ -59,9 +137,14 @@
                 <!-- formulario ingreso -->
                     <form action="" class="formLogin">
                     <h2>Iniciar sesión</h2>
-                    <input type="text" placeholder="Correo electrónico">
-                    <input type="password" placeholder="Contraseña">
-                    <button >Ingresar</button>
+                   
+                    
+                    <input type="text"  name= "name" onchange="handleForm(event)" placeholder="Nombre">
+                    <input type="text" name="apellido" onchange="handleForm(event)" placeholder="Apellido">
+                    <input type="text" name="mail" onchange="handleForm(event)" placeholder="Correo electrónico">                   
+                    <input type="password" name="contraseña" onchange="handleForm(event)" placeholder="Contraseña">
+
+                    <button >Registrarse</button>
 
                     </form>
 
@@ -71,12 +154,10 @@
 
                     <h2>Registrarse</h2>
 
-                    <input type="text" placeholder="Nombre y apellido">
-
-                    <input type="text" placeholder="Correo electrónico">
-                        
-                    <input type="password" placeholder="Contraseña">
-                    <button>Registrarse</button>
+                    <input type="text"  name= "name" onchange="handleForm(event)" placeholder="Nombre">
+                    <input type="text" name="apellido" onchange="handleForm(event)" placeholder="Apellido">
+                    <input type="text" name="mail" onchange="handleForm(event)" placeholder="Correo electrónico">                   
+                    <input type="password" name="contraseña" onchange="handleForm(event)" placeholder="Contraseña">
 
 
                 </form>
@@ -88,7 +169,42 @@
         </div>
     </main>
 
+    <footer class="footer">
+        <div class="footerBloque">
+    
+          <a class="logoPlanner" href="#">LOGO</a>
+          <a class="navbar-brand footerBrand" href="#">Daily Planner</a>
+    
+        </div>
+    
+        <div class="footerBloque">
+    
+          <a href="" class="footerAcceso">MES</a>
+          <a href="" class="footerAcceso">SEMANA</a>
+          <a href="" class="footerAcceso">DATOS CONTACTO</a>
+        </div>
+    
+        <div class="footerSocial">
+    
+          <a class="nav-link active " aria-current="page" href="#">
+            <i class="fab fa-facebook  footerRedes"></i>
+        </a>
+    
+        <a class="nav-link " href="#">
+            <i class="fab fa-instagram footerRedes"></i>
+        </a>
+    
+        <a class="nav-link " href="#">
+            <i class="fab fa-pinterest footerRedes"></i>
+        </a>
+    
+        </div>
+      </footer>
+
+    <script src="./scripts/class.js"></script>
     <script src="./scripts/functions.js"></script>
     <script src="./scripts/usuario.js"></script>
 </body>
+
+
 </html>

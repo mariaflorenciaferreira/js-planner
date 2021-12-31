@@ -16,10 +16,17 @@ class Cumpleaños {
 };
 
 class Usuario{
-    constructor(nombre, apellido, email,contraseña){
+    constructor(nombre, apellido, mail,contraseña){
         this.nombre=nombre;
         this.apellido=apellido;
-        this.email=email;
+        this.mail=mail;
         this.contraseña;
+    }
+
+    save(){
+        localStorage.setItem('nombre',this.nombre)
+        localStorage.setItem('apellido',this.apellido)
+        localStorage.setItem('email',this.mail)
+        localStorage.setItem('contraseña',this.contraseña)
     }
 }

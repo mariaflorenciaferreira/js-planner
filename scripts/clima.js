@@ -40,6 +40,7 @@ async function search(query) {
     } catch (err) {
       console.log(err);
       alert('No ingresaste una ciudad existente');
+      
     }
 }
   

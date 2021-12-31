@@ -4,6 +4,8 @@ $(document).ready(function (){
     // obtener coordenadas
 
     var nombreCiudad;
+    var lat;
+    var lng;
 
     function getCoordinates() {
         var options = {
@@ -71,8 +73,8 @@ $(document).ready(function (){
 
 
 
-    function updateImages(data) {
-        const temp = toCelsius(data.main.temp);
+    function updateImages(response) {
+        const temp = toCelsius(response.main.temp);
         let src = './img/weather,png';
         if (temp > 26) {
         src = './img/sun.png';
@@ -81,29 +83,40 @@ $(document).ready(function (){
         }
         tempImg.src = src;
     }
-
-
-    async function search(lat,lng) {
-        
-        try{
-        
-        const response = await fetch(`${api.url}?lat=${lat}&lon=${lng}&appid=${api.key}`);
-        const data = await response.json();
+    
+    function search(lat,lng){
+        const response =  fetch(`${api.url}?lat=${lat}&lon=${lng}&appid=${api.key}`);
         card.style.display = 'block';
-        city.innerHTML = `${data.name}, ${data.sys.country}`;
-        temp.innerHTML = `${toCelsius(data.main.temp)}c`;
-        weather.innerHTML = data.weather[0].description;
-        range.innerHTML = `${toCelsius(data.main.temp_min)}c / ${toCelsius(data.main.temp_max)}c`;
-        updateImages(data);
+        city.innerHTML = `${response.name}, ${response.sys.country}`;
+        temp.innerHTML = `${toCelsius(respose.main.temp)}c`;
+        weather.innerHTML = response.weather[0].description;
+        range.innerHTML = `${toCelsius(response.main.temp_min)}c / ${toCelsius(response.main.temp_max)}c`;
+        updateImages(response);
 
-        }catch (err) {
-        console.log(err);
-        alert('No tenemos acceso a tu ubicación');
-    
-    
-        
-        }
     }
+
+    // async function search(lat,lng) {
+        
+    //     try{
+        
+    //     const response = await fetch(`${api.url}?lat=${lat}&lon=${lng}&appid=${api.key}`);
+    //     const data = await response.json();
+       
+    //     card.style.display = 'block';
+    //     city.innerHTML = `${data.name}, ${data.sys.country}`;
+    //     temp.innerHTML = `${toCelsius(data.main.temp)}c`;
+    //     weather.innerHTML = data.weather[0].description;
+    //     range.innerHTML = `${toCelsius(data.main.temp_min)}c / ${toCelsius(data.main.temp_max)}c`;
+    //     updateImages(data);
+
+    //     }catch (err) {
+    //     console.log(err);
+    //     alert('No tenemos acceso a tu ubicación');
+        
+       
+        
+    //     }
+    // }
 
     function toCelsius(kelvin) {
         return Math.round(kelvin - 273.15);

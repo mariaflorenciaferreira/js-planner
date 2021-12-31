@@ -32,11 +32,11 @@ body {
 }
 .navBrand {
   color: #de9e43;
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 .navLink {
   color: #de9e43;
-  font-size: 2.4rem;
+  font-size: 2rem;
   margin: 0rem 2rem;
 }
 
@@ -190,6 +190,7 @@ input[type="text"]{
   justify-content: space-around;
   margin-top: 4rem;
   background-color: #de9e43;
+  
 }
 
 .footerBloque {
