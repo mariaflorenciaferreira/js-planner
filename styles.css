@@ -14,6 +14,11 @@ html {
 
 body {
   height: 100vh;
+  background-image: url(./img/userBck.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 /* barra de navegación  */
@@ -70,7 +75,8 @@ input[type="text"]{
 
 .bloqueUno {
   width: 80%;
-  border: 0.2rem solid #C4C4C0;
+ 
+  background-color: #de9e43;
   border-radius: 1.1rem;
   margin: 10rem 0rem 2rem 12rem;
   padding: 1rem;
@@ -86,29 +92,33 @@ input[type="text"]{
   display: flex;
   align-items: left;
   flex-direction: column;
+  margin-left: 2rem;
 }
 .fechaCenter {
   font-size: 5rem;
-  color: #de9e43;
+  color: #E7E6E1;
   letter-spacing: 0.5rem;
 }
 
 
 .fechaNumero {
   font-size: 6rem;
-  margin-left: 4rem;
+  text-align: center;
+  color: #E7E6E1;
 }
 
 .fechaMes {
   font-size: 2rem;
-  margin-left: 1rem;
+  text-align: center;
   letter-spacing: 0.5rem;
+  color: #E7E6E1;
 }
 
 .fechaAño {
   font-size: 3rem;
-  margin-left: 3.2rem;
+  text-align: center;
   letter-spacing: 0.7rem;
+  color: #E7E6E1;
 }
 
 .nuevaTarea {
