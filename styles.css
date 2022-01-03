@@ -54,10 +54,7 @@ body {
   border-radius: 0.3rem;
   padding: 0.3rem;
 }
-.navButton a{
-  text-decoration: none;
-  color: #de9e43;
-}
+
 
 .navButton:hover {
   color: #e9bf83;
@@ -67,15 +64,35 @@ body {
   font-size: 2rem;
 }
 
+.navButton a{
+  text-decoration: none;
+  color: #de9e43;
+}
+
+.navButton a:hover{
+  text-decoration: none;
+  color: #de9e43;
+}
+
+
+
 input[type="text"]{
   font-size: 2.5rem;
-  color: black;
+  color: #de9e43;
+  
 }
+
+input[type=text]:focus{
+  outline: none;
+
+  
+}
+
+
 
 
 .bloqueUno {
   width: 80%;
- 
   background-color: #de9e43;
   border-radius: 1.1rem;
   margin: 10rem 0rem 2rem 12rem;
@@ -92,26 +109,27 @@ input[type="text"]{
   display: flex;
   align-items: left;
   flex-direction: column;
-  margin-left: 2rem;
+  margin-left: 3rem;
 }
+
 .fechaCenter {
-  font-size: 5rem;
-  color: #E7E6E1;
-  letter-spacing: 0.5rem;
+  font-size: 6rem;
+  color: white;
+  letter-spacing: 0.7rem;
 }
 
 
 .fechaNumero {
   font-size: 6rem;
   text-align: center;
-  color: #E7E6E1;
+  color: white;
 }
 
 .fechaMes {
   font-size: 2rem;
   text-align: center;
   letter-spacing: 0.5rem;
-  color: #E7E6E1;
+  color: white;
 }
 
 .fechaAño {
@@ -123,37 +141,47 @@ input[type="text"]{
 
 .nuevaTarea {
   display: flex;
-  justify-content: center;
+  justify-items: center;
+  align-items: center;
   width: 100%;
+  margin:2rem 0rem 1rem 6rem;
+
+  
   
 }
 
-.tareaControl {
-  
-  margin: 2rem 1rem;
-  font-size: 2rem;
+.campoTareas{
+  display: inline-block;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  height: 5rem;
+  width: auto;
+  background-color: white;
   color: #de9e43;
-  height: 4rem;
-  
+  margin: 0rem 3rem;
+  font-size: 2rem;
+
 }
+
+.tareaOrdenar{
+  width: 25rem;
+}
+
+
 
 .addButton {
   font-style: bold;
-  background-color: #de9e43;
-  color: #E7E6E1;
-  width: 5rem;
-  height: 4rem;
+  font-size: 4rem;
+  background-color:transparent;
+  color: white;
   border: none;
-  border-radius: 0.3rem;
+ text-align: center;
+ display: inline-block;
+  
+ 
 }
 
-.tareaOrdenar {
-  height: 4rem;
-  border: none;
-  border-radius: 0.3rem;
-  width: 25rem;
-  color: #de9e43;
-}
+
 
 .listadoTareas {
   margin-left: 14rem;
@@ -164,33 +192,46 @@ input[type="text"]{
 .task{
   font-size: 2.5rem;
   width: 80%;
-  border-bottom: 0.2rem dotted #C4C4C0;
+  border-bottom: 0.2rem dotted white;
   margin: 2rem;
   cursor: pointer;
+  color: white;
+}
+
+
+
+.bloqueDos {
+  width: 80%;
+  background-color: #e9bf83;
+  border-radius: 1.1rem;
+  margin: 5rem 0rem 2rem 12rem;
+  padding: 1rem;
+}
+
+.tituloCumpleaños{
+  margin: 2rem 0rem;
+  font-size: 3.5rem;
+  color: white;
+  text-align: center;
+  letter-spacing: 0.5rem;
 }
 
 #ingresoCumpleaños{
   width: 50rem;
-  padding: 0.8em;
+  margin:1rem 2rem;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
 }
-
 
 .cumpleaños{
+  color: white;
   font-size: 2.5rem;
-  width: 80%;
-  margin: 2rem;
-  cursor: pointer;
+  margin: 1rem 2rem;
 }
 
 
-.bloqueDos {
-  width: 75%;
-  height: 30vh;
-  margin: 2rem 0rem 2rem 15rem;
-  background-color: #e9bf83;
-  padding: 2rem;
-  border-radius: 0.2rem;
-}
+
+
 
 
 

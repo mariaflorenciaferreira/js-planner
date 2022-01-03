@@ -5,8 +5,7 @@ document.querySelector('#botonInicioSesion').addEventListener("click",iniciarSes
 
 
 
-
-// funciones formulario de registro/inicio de sesiòn
+// funciones formulario de registro/inicio de sesión
 
 
 
