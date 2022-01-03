@@ -170,10 +170,11 @@
           
           <form id="formTareas" class="nuevaTarea" method="post" onsubmit="addNewTask(event)">
 
-            <div class="tareaControl" > 
-              <input type="text"  placeholder="Ingresar nueva tarea" autocomplete="off" name="ingresoNuevaTarea" id="ingresoTarea"/>
+            <div > 
+              <input type="text"  placeholder="Ingresar nueva tarea" autocomplete="off" name="ingresoNuevaTarea" id="ingresoTarea"
+              class="campoTareas" />
 
-              <button type="submit" class="addTaskButton addButton" id="taskButton " >+</button>
+              <button type="submit" class="addButton addTaskButton " id="taskButton " >+</button>
 
            
             </div>
@@ -182,7 +183,7 @@
 
             <div class="tareaControl">
     
-             <button class="tareaOrdenar" type="button"> ordenar tareas</button> 
+             <button class="campoTareas tareaOrdenar" type="button"> ordenar tareas</button> 
             </div>
             
 
@@ -208,9 +209,10 @@
       <form id="formCumpleaños" class="cumpleaños" method="post" onsubmit="addNewBirthday(event)">
 
         <div > 
+          <h2 class="tituloCumpleaños">RECORDATORIO CUMPLEAÑOS</h2>
           <input type="text"  placeholder="Ingresar nombre de quien cumple años" autocomplete="off" name="ingresoCumpleaños" id="ingresoCumpleaños"/>
 
-          <button type="submit" class="addBirthdayButton addButton" >+</button>
+          <button type="submit" class="addButton" >+</button>
 
         </div>
 

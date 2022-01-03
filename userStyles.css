@@ -98,6 +98,36 @@ main{
     color: grey;
 }
 
+.botonForms{
+    padding: 1rem 4rem;
+    border: 0.2rem solid white;
+    border-radius: 0.5rem;
+    background: transparent;
+    font-size: 1.4rem;
+    font-weight: 60rem;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    
+}
+
+
+.botonForms:hover{
+    background-color:#e9bf83;
+    color: grey;
+}
+
+.botonForms a{
+    text-decoration: none;
+    color: white;
+}
+
+.botonForms a:hover{
+    background-color:#e9bf83;
+    color: grey;
+
+}
+
 /* estilo formularios */
 
 .contenedorLogin-register{
@@ -169,6 +199,30 @@ main{
     display: none;
 }
 
+
+input[type="mail"]{
+    font-size: 2.5rem;
+    color: #de9e43;
+    
+  }
+  
+  input[type=mail]:focus{
+    outline: none;
+  
+    
+  }
+
+input[type="password"]{
+    font-size: 2.5rem;
+    color: #de9e43;
+    
+  }
+  
+  input[type=password]:focus{
+    outline: none;
+  
+    
+  }
 
 
 
