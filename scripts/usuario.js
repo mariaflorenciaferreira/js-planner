@@ -1,7 +1,6 @@
-
 document.getElementById("botonRegistrarse").addEventListener("click",register);
 
-document.querySelector('#botonInicioSesion').addEventListener("click",iniciarSesion);
+document.getElementById('botonInicioSesion').addEventListener("click",iniciarSesion);
 
 
 
@@ -34,6 +33,14 @@ function register(){
     cajaRegister.style.opacity="0";
     cajaLogin.style.opacity="1";
 
+}
+
+// funcion pagina cargada
+
+function loadPage(){
+    
+    const formRegistro =document.getElementById('formRegister')
+    formRegistro.addEventListener('submit',(e)=>{submit(e)})
 }
 
 
@@ -104,17 +111,18 @@ function submit(e){
     for (const element of e.target){
         element.value && arr.push({name:element.name, value:element.value})
         
-    
 
     }
-    console.log(arr)
+    
     const user = new Usuario(arr[0].value, arr[1].value, arr[2].value)
     user.save()
 
     usuariosRegistrados.push(arr)
+    
+    console.log(arr)
     console.log(usuariosRegistrados)
 
-   
+    
 }
 
 
