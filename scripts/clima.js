@@ -16,11 +16,11 @@ const range = document.getElementById('range');
 
 function updateImages(data) {
     const temp = toCelsius(data.main.temp);
-    let src = './img/weather.png';
+    let src = '../img/weather.png';
     if (temp > 26) {
-      src = './img/sun.png';
+      src = '../img/sun.png';
     } else if (temp < 20) {
-      src = './img/storm.png';
+      src = '../img/storm.png';
     }
     tempImg.src = src;
 }
@@ -32,7 +32,7 @@ async function search(query) {
       card.style.display = 'block';
       city.innerHTML = `${data.name}, ${data.sys.country}`;
       
-      temp.innerHTML = `${toCelsius(data.main.temp)}c`;
+      temp.innerHTML = `${toCelsius(data.main.temp)} ºC`;
       weather.innerHTML = data.weather[0].description;
       range.innerHTML = `${toCelsius(data.main.temp_min)}c / ${toCelsius(data.main.temp_max)}c`;
       updateImages(data);

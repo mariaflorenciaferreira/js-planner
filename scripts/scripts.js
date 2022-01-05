@@ -47,6 +47,8 @@ const changeTaskState = event => {
 
 
 
+
+
 // ingreso cumpleaños
 
 const contenedorCumpleaños= $('#contenedorCumpleaños');
@@ -56,17 +58,21 @@ const addNewBirthday = event => {
   const { value } = event.target.ingresoCumpleaños;
   if(!value) return;
   const cumple = document.createElement('div');
-  cumple.classList.add('cumpleaños');
+  cumple.classList.add('nuevoCumpleaños');
   cumple.addEventListener('click', changeBirthday)
   cumple.textContent = value;
   contenedorCumpleaños.append(cumple);
  
   event.target.reset();
+
+  
 };
 
 const changeBirthday = event => {
 
-  $('.cumpleaños').fadeOut(250);
+  $('.nuevoCumpleaños').fadeOut(250);
+
+  
   
 };
 
