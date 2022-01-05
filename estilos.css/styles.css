@@ -284,7 +284,7 @@ input[type=text]:focus{
 }
 
 .footerAcceso {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   text-decoration: none;
   margin: 1rem 0rem;
   color: #E7E6E1;
@@ -317,6 +317,36 @@ input[type=text]:focus{
 .done {
   text-decoration: line-through;
   color:#e9bf83;
+}
+
+.newPageBody{
+  background-image: none;
+  
+}
+
+.mainNewPage{
+  height: 100vh;
+  display: block;
+  justify-items: center;
+  align-items: center;
+  margin-top: 15rem;
+
+}
+
+.newPageImg{
+  width:28vw;
+  margin:5rem 0rem 5rem 48rem;
+  
+
+}
+
+.newPageTitle{
+  font-size: 2rem;
+  color: #de9e43;
+  letter-spacing: 0.3rem;
+  background-color: #E7E6E1;
+  padding: 1rem;
+  text-align: center;
 }
 
 

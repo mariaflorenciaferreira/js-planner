@@ -33,11 +33,10 @@
    
    
 
-    <title>PLANNER DIARIO</title>
+    <title>PÁGINA EN CONSTRUCCIÓN</title>
 </head>
-<body>
-
-  <header>
+<body class="newPageBody">
+    <header>
 
         
         <!-- nav bar -->
@@ -84,19 +83,19 @@
              <a
                class="nav-link" id="navLink"
                aria-current="page"
-               href="./new.html"
+               href="#"
                >DIA</a
              >
            </li>
 
            <li class="nav-item">
-             <a class="nav-link" id="navLink" href="./new.html"
+             <a class="nav-link" id="navLink" href="#"
                >SEMANA</a
              >
            </li>
 
            <li class="nav-item" id="navLink">
-             <a class="nav-link navLink" href="./new.html">MES</a>
+             <a class="nav-link navLink" href="#">MES</a>
            </li>
         
           </ul>
@@ -113,119 +112,21 @@
 
 
   </header>
+  
+    <main>
 
- 
+        <div class="mainNewPage">
 
+            <img src="./img/onHold.svg" alt="página en construcción" class="newPageImg">
 
-      
- 
-
-  <main>
-        
-    <!--planner -->
-    <div class="bloqueUno">
-        <div class=bloqueFecha>
-
-          <!-- fecha del día -->
-
-          <div class="fechaLeft" > 
-
-            
-          <div class="fechaNumero" id="numero"> </div>
-          <div class="fechaMes" id="mes"> </div>
-          <div class="fechaAño" id="año"></div></div>
-          <div class="fechaCenter" id="diaSemana"> </div>
-
-
-
-          <!-- buscador del clima  -->
-
-          <div class="bloqueClima">  
-
-            <div class="search-form">
-              <form id="search-form">
-                <div class="searchbox">
-                  <input type="text" autocomplete="off" placeholder="Buscar tu ciudad" class="search" id="searchbox" />
-                </div>
-              </form>
-            </div>
-            <div class="weather-card" id="card">
-              <div class="city" id="city"></div>
-              <div class="date" id="date"></div>
-              <div class="temperature">
-                <img src="./img/thermometer.png" class="temp-img" id="temp-img" />
-                <div class="temp" id="temp"></div>
-              </div>
-              <div class="weather" id="weather"></div>
-              <div class="range" id="range"></div>
-            </div>
-          </div>
-            
+            <h3 class="newPageTitle">ESTAMOS TRABAJANDO EN ESTA SECCIÓN</h3>
 
 
         </div>
 
-        <!-- formulario ingreso tareas -->
-
-        <div class="nuevaTarea">
-          
-          <form id="formTareas" class="nuevaTarea" method="post" onsubmit="addNewTask(event)">
-
-            <div > 
-              <input type="text"  placeholder="Ingresar nueva tarea" autocomplete="off" name="ingresoNuevaTarea" id="ingresoTarea"
-              class="campoTareas" />
-
-              <button type="submit" class="addButton addTaskButton " id="taskButton " >+</button>
-
-           
-            </div>
-
-
-
-            
-
-
-          </form>
-
-         
-        </div>
-
-
-      <!-- listado tareas ingresadas -->
-
-      <div class="listadoTareas" id="contenedorTareas"> </div>
-       
-
-
-    </div>
-
-    <!-- formulario ingreso cumpleaños -->
-
-    <div class="bloqueDos">
-
-      <form id="formCumpleaños" class="cumpleaños" method="post" onsubmit="addNewBirthday(event)">
-
-        <div > 
-          <h2 class="tituloCumpleaños">RECORDATORIO CUMPLEAÑOS</h2>
-          <input type="text"  placeholder="Ingresar nombre de quien cumple años" autocomplete="off" name="ingresoCumpleaños" id="ingresoCumpleaños"/>
-
-          <button type="submit" class="addButton" >+</button>
-
-        </div>
-
-      <!-- listado cumpleaños -->
-
-      <div class="listadoCumpleaños" id="contenedorCumpleaños">
-
-      </div>
-        
-    </div>
+    </main>
 
     
-
-
-   </main>
-
    <!-- footer -->
 
    <footer class="footer">
@@ -246,9 +147,9 @@
 
     <div class="footerBloque">
 
-      <a href="./new.html" class="footerAcceso">MES</a>
-      <a href="./new.html" class="footerAcceso">SEMANA</a>
-      <a href="./new.html" class="footerAcceso">DATOS CONTACTO</a>
+      <a href="" class="footerAcceso">MES</a>
+      <a href="" class="footerAcceso">SEMANA</a>
+      <a href="" class="footerAcceso">DATOS CONTACTO</a>
     </div>
 
     <div class="footerSocial">
@@ -270,13 +171,8 @@
 
  
  
-  <!-- jQuery links -->
-    <script src="./scripts/class.js"></script>
-    <script src="./scripts/functions.js"></script>
-    <script src="./scripts/usuario.js"></script>
-    <script src="./scripts/scripts.js"></script>
-    <script src="./scripts/clima.js"></script>
-
+ 
+  
     
 </body>
 </html>
