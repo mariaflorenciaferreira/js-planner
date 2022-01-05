@@ -29,7 +29,7 @@
 
     <title>Ingreso y registro de usuarios</title>
 </head>
-<body >
+<body  onload="loadPage()">
 
     <header>
 
@@ -111,7 +111,7 @@
     <main>
         <div class="contenedorUsuario">
 
-            
+            <!-- fondo formulario usuario -->
 
             <div class="cajaUsuario">
                 <div class="logIn">
@@ -132,34 +132,33 @@
 
 
             <!-- formularios usuario -->
-            <div class="contenedorLogin-register">
+            <div class="contenedorLogin-register" id="contenedorLogin-register">
 
                 <!-- formulario ingreso -->
-                    <form action="" class="formLogin">
+                    <form action="" class="formLogin" id="formLogin">
                     <h2>Iniciar sesión</h2>
                    
                     
-                    <input type="text"  name= "name" onchange="handleForm(event)" placeholder="Nombre">
-                    <input type="text" name="apellido" onchange="handleForm(event)" placeholder="Apellido">
-                    <input type="text" name="mail" onchange="handleForm(event)" placeholder="Correo electrónico">                   
-                    <input type="password" name="contraseña" onchange="handleForm(event)" placeholder="Contraseña">
+                   
+                    <input type="text" name="mail"  placeholder="Correo electrónico" onchange="handleForm(event)">                   
+                    <input type="password" name="contraseña" placeholder="Contraseña" onchange="handleForm(event)">
 
-                    <button class="botonForms"> <a href="./index.html" >Iniciar sesión</a> </button>
+                    <button type="button" class="botonForms" id="logInButton"> Iniciar sesión</button>
 
                     </form>
 
                 <!-- formulario registro -->
 
-                <form action="" class="formRegister">
+                <form action="" class="formRegister" id="formRegister">
 
                     <h2>Registrarse</h2>
 
-                    <input type="text"  name= "name" onchange="handleForm(event)" placeholder="Nombre">
-                    <input type="text" name="apellido" onchange="handleForm(event)" placeholder="Apellido">
-                    <input type="text" name="mail" onchange="handleForm(event)" placeholder="Correo electrónico">                   
-                    <input type="password" name="contraseña" onchange="handleForm(event)" placeholder="Contraseña">
+                    <input type="text"  name= "name"  placeholder="Nombre" onchange="handleForm(event)">
+                    <input type="text" name="apellido"  placeholder="Apellido" onchange="handleForm(event)">
+                    <input type="text" name="mail" placeholder="Correo electrónico" onchange="handleForm(event)">                   
+                    <input type="password" name="contraseña" placeholder="Contraseña" onchange="handleForm(event)">
 
-                    <button class="botonForms"><a  href="./index.html">Registrarse</a> </button>
+                    <button class="botonForms" id="registerButton">Registrarse</button>
 
 
                 </form>

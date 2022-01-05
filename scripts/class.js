@@ -23,10 +23,15 @@ class Usuario{
         this.contraseña;
     }
 
+    cambiarDatos(value){
+        this[value.name]=value.value 
+    }
+
     save(){
         localStorage.setItem('nombre',this.nombre)
         localStorage.setItem('apellido',this.apellido)
-        localStorage.setItem('email',this.mail)
-        localStorage.setItem('contraseña',this.contraseña)
+        localStorage.setItem('mail',this.mail)
     }
+
+    
 }

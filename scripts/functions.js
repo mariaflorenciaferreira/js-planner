@@ -87,5 +87,13 @@ function diaFecha(){
  
 }
 
+// funcion pagina cargada
+
+function loadPage(){
+    
+    const formRegistro =document.getElementById('formRegister')
+    formRegistro.addEventListener('submit',(e)=>{submit(e)})
+}
+
 
 

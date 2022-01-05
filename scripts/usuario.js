@@ -38,24 +38,81 @@ function register(){
 
 
 
-// localStorage datos del usuario
+// ingreso de usuario
+
+
+$('#logInButton').on('click'),()=>{
+
+    let user = buscarUsuario(correo);
+
+    if (user!=false){
+        alert(`Bienvenido ${usuariosRegistrados[i].nombre}`)
+    }else{
+        alert("Usuario no registrado");
+    }
+
+    
+}
+
+// busqueda usuarios registrados
+
+let usuariosRegistrados=[];
+
+function buscarUsuario(correo){
+
+    if (!localStorage.getItem("listaUsuarios")){
+        return false;
+    }
+
+     usuariosRegistrados=JSON.parse(localStorage.getItem("listaUsuarios"));
+
+    let encontrado=false;
+    let i=0;
+
+    while (!encontrado && i !=usuariosRegistrados.length){
+        if(usuariosRegistrados[i].email== correo){
+           
+            return usuariosRegistrados[i];
+        }
+
+        i++;
+        
+    }
+
+    return encontrado;
+
+}
+
+
+// registro de usuario
+
 
 function handleForm(e){
-    e.target.name==='nombre' && e.target.value.toUpperCase()
-
+    
+console.log('valor del input', e.target.value)    
+console.log('name del input', e.target.name)
 
 }
 
+const arr=[];
 
 function submit(e){
-    e.preventDefault()
-    const arr=[]
+    e.preventDefault();
 
+    
+    
     for (const element of e.target){
-        console.log(element)
-        element.value && arr.push({name: element.name, value: element.value })
+        element.value && arr.push({name:element.name, value:element.value})
+    
+
     }
     console.log(arr)
-    const user = new Usuario(arr[0].value, arr[1].value, arr[2].value,arr[3].value)
-  user.save()
+    const user = new Usuario(arr[0].value, arr[1].value, arr[2].value)
+    user.save()
+
+    usuariosRegistrados.push(arr)
+    console.log(usuariosRegistrados)
 }
+
+
+
