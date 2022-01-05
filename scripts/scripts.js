@@ -45,10 +45,6 @@ const changeTaskState = event => {
 
 
 
-
-
-
-
 // ingreso cumpleaños
 
 const contenedorCumpleaños= $('#contenedorCumpleaños');
@@ -73,8 +69,10 @@ const changeBirthday = event => {
   $('.nuevoCumpleaños').fadeOut(250);
 
   
+
   
 };
+
 
 
   
