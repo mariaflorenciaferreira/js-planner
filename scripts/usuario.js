@@ -1,6 +1,16 @@
-document.getElementById("botonRegistrarse").addEventListener("click",register);
+// funcion pagina cargada
 
-document.getElementById('botonInicioSesion').addEventListener("click",iniciarSesion);
+function loadPage(){
+    
+    const formRegistro =document.getElementById('formRegister')
+    formRegistro.addEventListener('submit',(e)=>{submit(e)})
+
+    document.getElementById("botonRegistrarse").addEventListener("click",register);
+
+    document.getElementById('botonInicioSesion').addEventListener("click",iniciarSesion);
+}
+
+
 
 
 
@@ -35,13 +45,7 @@ function register(){
 
 }
 
-// funcion pagina cargada
 
-function loadPage(){
-    
-    const formRegistro =document.getElementById('formRegister')
-    formRegistro.addEventListener('submit',(e)=>{submit(e)})
-}
 
 
 
@@ -118,7 +122,7 @@ function submit(e){
     user.save()
 
     usuariosRegistrados.push(arr)
-    
+
     console.log(arr)
     console.log(usuariosRegistrados)
 
