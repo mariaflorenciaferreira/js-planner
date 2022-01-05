@@ -115,7 +115,9 @@ input[type=text]:focus{
 .fechaCenter {
   font-size: 6rem;
   color: white;
-  letter-spacing: 0.7rem;
+  letter-spacing: 0.8rem;
+  text-align: center;
+  padding-left:12rem ;
 }
 
 
@@ -285,84 +287,9 @@ input[type=text]:focus{
 }
 
 .done {
-  background-color: var(--diabled);
   text-decoration: line-through;
-  color: var(--dark);
+  color:#e9bf83;
 }
-
-
-
-/* bloque clima */
-
-.search-form {
-  margin: 20px 20px;
-}
-
-.searchbox {
-  padding: 10px 20px;
-  
-  max-width: 480px;
-  margin: 0px auto;
-  border-radius: 3px;
-}
-
-.search {
-  width: 100%;
-  
-  border: none;
-  font-size: 1rem;
-}
-
-.search:focus {
-  outline: none;
-}
-
-.weather-card {
-  margin: 20px 20px;
-  
-  padding: 20px;
-  text-align: center;
-  border-radius: 3px;
-  
-}
-
-.city {
-  font-size: 2.5rem;
-  text-transform: uppercase;
-  margin-bottom: 0.5rem;
-  color: #de9e43;
-}
-
-.date {
-  font-size: 0.9rem;
-  margin-bottom: 2rem;
-  color: #de9e43;
-}
-
-
-.temperature {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 2rem;
-  color: black;
-}
-
-.temp-img {
-  width: 50px;
-  margin-right: 10px;
-}
-
-.temp {
-  font-size: 2.2rem;
-  font-weight: bold;
-}
-
-.weather {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-}
-
 
 
 

@@ -17,9 +17,7 @@ document.querySelector("#diaSemana").innerHTML= `${diaSemana}`;
 // ingreso nuevas tareas
 
 
-
-
-const contenedorTareas =$('#contenedorTareas');
+const contenedorTareas =document.getElementById('contenedorTareas');
 
 const addNewTask = event => {
   event.preventDefault();
@@ -36,13 +34,15 @@ const addNewTask = event => {
 
 
 
-  
+// estado tareas
 
 const changeTaskState = event => {
 
   
   event.target.classList.toggle('done');
 };
+
+
 
 
 

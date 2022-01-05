@@ -16,7 +16,7 @@ const range = document.getElementById('range');
 
 function updateImages(data) {
     const temp = toCelsius(data.main.temp);
-    let src = './img/weather,png';
+    let src = './img/weather.png';
     if (temp > 26) {
       src = './img/sun.png';
     } else if (temp < 20) {

@@ -103,6 +103,7 @@ function submit(e){
     
     for (const element of e.target){
         element.value && arr.push({name:element.name, value:element.value})
+        
     
 
     }
@@ -112,6 +113,8 @@ function submit(e){
 
     usuariosRegistrados.push(arr)
     console.log(usuariosRegistrados)
+
+   
 }
 
 
