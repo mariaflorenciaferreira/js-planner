@@ -29,7 +29,21 @@ const addNewTask = event => {
   task.textContent = value;
   contenedorTareas.append(task);
   event.target.reset();
+
 };
+
+// guardar tareas en localstorage
+
+const tareasIngresadas=e=>{
+  let taskData={
+    ingresoNuevaTarea:getElementById('ingresoTarea').value
+  }
+
+  localStorage.setItem('taskData',JSON.stringify(taskData));
+
+  e.preventDefault();
+}
+  
 
 
 
@@ -67,8 +81,6 @@ const addNewBirthday = event => {
 const changeBirthday = event => {
 
   $('.nuevoCumpleaños').fadeOut(250);
-
-  
 
   
 };

@@ -1,8 +1,12 @@
 class Tareas {
     constructor(descripcionTarea, color) {
         this.descripcionTarea = descripcionTarea;
-        this.color = color;
+        
     }
+
+    
+
+    
 };
     
 class Cumpleaños {
@@ -16,21 +20,11 @@ class Cumpleaños {
 };
 
 class Usuario{
-    constructor(nombre, apellido, mail,contraseña){
-        this.nombre=nombre;
-        this.apellido=apellido;
-        this.mail=mail;
-        this.contraseña;
-    }
-
-    cambiarDatos(value){
-        this[value.name]=value.value 
-    }
-
-    save(){
-        localStorage.setItem('nombre',this.nombre)
-        localStorage.setItem('apellido',this.apellido)
-        localStorage.setItem('mail',this.mail)
+    constructor(userName, userSurname, mail,contraseña){
+        this.userName=userName;
+        this.userSurname=userSurname;
+        this.userMail=userMail;
+        this.userPwd=userPwd;
     }
 
     

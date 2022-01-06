@@ -46,9 +46,6 @@ function register(){
 }
 
 
-
-
-
 // ingreso de usuario
 
 
@@ -67,7 +64,6 @@ $('#logInButton').on('click'),()=>{
 
 // busqueda usuarios registrados
 
-let usuariosRegistrados=[];
 
 function buscarUsuario(correo){
 
@@ -100,34 +96,46 @@ function buscarUsuario(correo){
 
 function handleForm(e){
     
-console.log('valor del input', e.target.value)    
-console.log('name del input', e.target.name)
+    console.log('valor del input', e.target.value)    
+    console.log('name del input', e.target.name)
+
+    submit();
 
 }
 
-const arr=[];
+
+
+
 
 function submit(e){
     e.preventDefault();
 
-    
-    
+    let arr=[];
+
+     
     for (const element of e.target){
         element.value && arr.push({name:element.name, value:element.value})
         
 
     }
     
-    const user = new Usuario(arr[0].value, arr[1].value, arr[2].value)
-    user.save()
+    let usuarioNuevo = new Usuario(arr[0].value, arr[1].value, arr[2].value)
 
-    usuariosRegistrados.push(arr)
+    guardarUsuario(usuarioNuevo);
+    
+    console.log(usuarioNuevo);
 
-    console.log(arr)
-    console.log(usuariosRegistrados)
-
+    console.log(arr);
     
 }
 
+let listadoUsuarios="listadoUsuarios";
+function guardarUsuario( usuarioNuevo){
+
+    let usuariosRegistrados=new Array();
+    usuariosRegistrados.push(usuarioNuevo);
+    let usuariosRegistrados_string=JSON.stringify(usuariosRegistrados);
+    localStorage.setItem(listadoUsuarios,usuariosRegistrados_string);
+}
 
 

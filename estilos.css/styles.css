@@ -29,8 +29,8 @@ body {
   flex-direction: row;
   width: 100%;
   justify-content: space-between;
-  box-shadow: 0 2px 4px 0 #C4C4C0;
-  border-radius: 0.4rem;
+  box-shadow: 2px 2px 3px 3px #C4C4C0;
+  border-radius: 0.6rem;
   
   
 }
@@ -52,9 +52,11 @@ body {
   font-size: 2rem;
   
 }
+
 #navLink:hover{
   text-decoration: none;
   color: #de9e43;
+  
 }
 
 .navButton {
@@ -68,10 +70,12 @@ body {
 }
 
 
+
+
 .navButton:hover {
-  color: #e9bf83;
-  background-color: #E7E6E1;
-  border: 0.2rem solid #E7E6E1;
+  color: white;
+  background-color: #de9e43;
+  border: 0.2rem solid #de9e43;
   border-radius: 0.3rem;
   font-size: 2rem;
 }
@@ -83,7 +87,7 @@ body {
 
 .navButton a:hover{
   text-decoration: none;
-  color: #de9e43;
+  color: white;
 }
 
 
@@ -101,7 +105,7 @@ input[type=text]:focus{
 }
 
 
-
+/* bloque superior: fechas tareas */
 
 .bloqueUno {
   width: 80%;
@@ -111,6 +115,9 @@ input[type=text]:focus{
   padding: 1rem;
   
 }
+
+/* fecha */
+
 .bloqueFecha {
   display: flex;
   align-items: center;
@@ -152,6 +159,8 @@ input[type=text]:focus{
   letter-spacing: 0.7rem;
   color: white;
 }
+
+/* tareas */
 
 .nuevaTarea {
   display: flex;
@@ -324,6 +333,8 @@ input[type=text]:focus{
   
 }
 
+/* paginas nuevas/en construccion */
+
 .mainNewPage{
   height: 100vh;
   display: block;
@@ -335,18 +346,43 @@ input[type=text]:focus{
 
 .newPageImg{
   width:28vw;
-  margin:5rem 0rem 5rem 48rem;
-  
+  margin:5rem;
+  margin-left: 35vw;
 
 }
 
 .newPageTitle{
   font-size: 2rem;
+  font-weight: 600;
   color: #de9e43;
   letter-spacing: 0.3rem;
   background-color: #E7E6E1;
   padding: 1rem;
   text-align: center;
+}
+
+.newPageText{
+  margin-top: 2rem;
+  margin-left: 47vw;
+  
+  
+}
+
+.newPageLink{
+  font-size: 1.6rem;
+  text-decoration: none;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  background-color: #de9e43;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  color: white;
+ 
+}
+
+.newPageLink:hover{
+  background-color: #C4C4C0;
+  color: #de9e43;
 }
 
 

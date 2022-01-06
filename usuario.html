@@ -149,16 +149,16 @@
 
                 <!-- formulario registro -->
 
-                <form action="" onSubmit='this.reset()' class="formRegister" id="formRegister">
+                <form action="" onSubmit="signUp(event);" class="formRegister" id="formRegister">
 
                     <h2>Registrarse</h2>
 
-                    <input type="text"  name= "name"  placeholder="Nombre" onchange="handleForm(event)">
-                    <input type="text" name="apellido"  placeholder="Apellido" onchange="handleForm(event)">
-                    <input type="text" name="mail" placeholder="Correo electrónico" onchange="handleForm(event)">                   
-                    <input type="password" name="contraseña" placeholder="Contraseña" onchange="handleForm(event)">
+                    <input type="text" id="userName" name= "name"  placeholder="Nombre" required onchange="handleForm(event)">
+                    <input type="text" name="apellido"  placeholder="Apellido" required onchange="handleForm(event)">
+                    <input type="text" name="mail" placeholder="Correo electrónico" required onchange="handleForm(event)">                   
+                    <input type="password" name="contraseña" placeholder="Contraseña" required onchange="handleForm(event)">
 
-                    <button class="botonForms" id="registerButton">Registrarse</button>
+                    <button type="submit" class="botonForms" id="registerButton">Registrarse</button>
 
 
                 </form>
