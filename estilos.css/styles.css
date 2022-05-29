@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     border: 0;
-   
 }
 
 
@@ -18,7 +17,11 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;  
+
 }
 
 /* barra de navegación  */
@@ -31,14 +34,13 @@ body {
   justify-content: space-between;
   box-shadow: 2px 2px 3px 3px #C4C4C0;
   border-radius: 0.6rem;
-  
-  
+
 }
 
 .navLogo {
   text-decoration: none;
   margin: 0.5rem 1rem;
-  width: 4vw;
+  width: 3vw;
 }
 
 .navBrand {
@@ -50,6 +52,7 @@ body {
 #navLink {
   color: grey;
   font-size: 2rem;
+  margin-left: 3rem;
   
 }
 
@@ -68,8 +71,6 @@ body {
   border-radius: 0.3rem;
   padding: 0.3rem;
 }
-
-
 
 
 .navButton:hover {
@@ -108,7 +109,7 @@ input[type=text]:focus{
 /* bloque superior: fechas tareas */
 
 .bloqueUno {
-  width: 80%;
+  
   background-color: #de9e43;
   border-radius: 1.1rem;
   margin: 10rem 0rem 2rem 12rem;
@@ -188,18 +189,15 @@ input[type=text]:focus{
 
 
 
-
-
 .addButton {
   font-style: bold;
   font-size: 4rem;
   background-color:transparent;
   color: white;
   border: none;
- text-align: center;
- display: inline-block;
+  text-align: center;
+  display: inline-block;
   margin :0rem 2rem;
- 
 }
 
 
@@ -222,10 +220,10 @@ input[type=text]:focus{
 /* cumpleaños */
 
 .bloqueDos {
-  width: 80%;
+  
   background-color: #e9bf83;
   border-radius: 1.1rem;
-  margin: 5rem 0rem 2rem 12rem;
+  margin: 8rem 0rem 2rem 12rem;
   padding: 1rem;
 }
 
@@ -261,7 +259,7 @@ input[type=text]:focus{
   display: flex;
   width: 100%;
   justify-content: space-around;
-  margin-top: 4rem;
+  margin-top:auto;
   background-color: #de9e43;
   
 }
@@ -270,7 +268,7 @@ input[type=text]:focus{
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .footerBrand {
